@@ -1,7 +1,7 @@
 {
-  "name": "webpacktemplate",
+  "name": "museum",
   "version": "1.0.0",
-  "description": "My template",
+  "description": "Museup project",
   "main": "index.js",
   "scripts": {
     "build": "webpack --config ./build/webpack.build.conf.js",
@@ -27,8 +27,7 @@
     "merge",
     "babel",
     "babel7",
-    "scss",
-    "vue"
+    "scss"
   ],
   "license": "MIT",
   "devDependencies": {
