@@ -1,0 +1,63 @@
+.playlist-pagination {
+
+  display    : flex;
+  width      : fit-content;
+  margin     : 0 auto;
+  padding    : 0;
+  list-style : none;
+}
+
+.playlist-pagination .playlist-pagination__btn {
+  width        : 12px;
+  height       : 12px;
+  margin-right : 20px;
+  border       : none;
+  background   : transparent;
+}
+
+.playlist-pagination .playlist-pagination__btn:last-child {
+  margin-right : 0;
+}
+
+.playlist-pagination .playlist-pagination__btn--rounded {
+  cursor           : pointer;
+  border-radius    : 50%;
+  background-color : #999;
+}
+
+.playlist-pagination .playlist-pagination__btn--rounded:hover {
+  background-color : #710707;
+}
+
+.playlist-pagination .playlist-pagination__btn--active {
+  background-color : #333;
+}
+
+.playlist-pagination .playlist-pagination__btn--prev,
+.playlist-pagination .playlist-pagination__btn--next {
+  display : flex;
+  padding : 0;
+  cursor  : pointer;
+}
+
+.playlist-pagination .playlist-pagination__btn--prev:hover .playlist-pagination__icon,
+.playlist-pagination .playlist-pagination__btn--next:hover .playlist-pagination__icon {
+  fill : #710707;
+}
+
+.playlist-pagination .playlist-pagination__btn .playlist-pagination__icon {
+  fill : #999;
+}
+
+.video-playlist {
+
+  display         : flex;
+  justify-content : space-between;
+  margin          : 40px 0 28px;
+  padding         : 0;
+  list-style      : none;
+}
+
+.video-playlist .video-playlist__item-frame {
+  border : none
+}

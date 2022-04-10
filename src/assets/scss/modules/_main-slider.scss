@@ -1,0 +1,123 @@
+.main-slider {
+  position    : relative;
+  max-width   : 1000px;
+  margin-left : auto;
+
+  &::before {
+    content    : '';
+    position   : absolute;
+    z-index    : 2;
+    top        : 0;
+    bottom     : 0;
+    left       : 0;
+    width      : 360px;
+    height     : 100%;
+    background : linear-gradient(270deg, rgba(0, 0, 0, 0) 0%, #000 100%);
+  }
+
+  &__wrapper {
+
+
+  }
+
+  &__pagination {
+    display : flex;
+
+    .swiper-pagination-bullet {
+      width            : 16px;
+      height           : 16px;
+      margin-top       : -4px;
+      margin-right     : 25px;
+      opacity          : 1;
+      border-radius    : 0;
+      background-color : #fff;
+
+      &:last-child {
+        margin-right : 0;
+      }
+
+      &-active {
+        background-color : #d2b183;
+      }
+
+      &:hover {
+        transition       : all .3s;
+        background-color : var(--gold);
+      }
+    }
+  }
+
+  &__navigation {
+    display         : flex;
+    justify-content : space-between;
+    width           : 80px;
+  }
+
+  /* .main-slider__btn */
+  &__btn {
+    z-index         : 10;
+    display         : flex;
+    align-items     : center;
+    justify-content : center;
+    width           : 30px;
+    height          : 8px;
+    margin-top      : -4px;
+    cursor          : pointer;
+    fill            : #fff;
+
+    :hover {
+      transition : all .3s;
+      fill       : var(--gold);
+    }
+
+
+    &--next {
+
+    }
+
+    &--prev {
+
+    }
+  }
+
+  /* .main-slider__footer */
+  &__footer {
+    position         : relative;
+    z-index          : 1;
+    display          : flex;
+    align-items      : center;
+    justify-content  : space-between;
+    max-width        : 602px;
+    margin-top       : -70px;
+    margin-left      : auto;
+    padding          : 42px 75px 38px 75px;
+    background-color : #030303;
+  }
+
+  /* .main-slider__counter */
+  &__counter {
+  }
+}
+
+
+.main-slider-counter {
+  font-size      : 22px;
+  line-height    : 1.82;
+  display        : flex;
+  text-transform : uppercase;
+  color          : #fff;
+
+  /* .main-slider-counter__current */
+  &__current {
+  }
+
+  /* .main-slider-counter__all */
+  &__all {
+  }
+
+  /* .main-slider-counter__delimiter */
+  &__delimiter {
+    margin : 0 11px;
+  }
+}
+

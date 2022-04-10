@@ -1,0 +1,514 @@
+.modal-order {
+  position         : fixed;
+  z-index          : 100;
+  top              : 0;
+  right            : 0;
+  bottom           : 0;
+  left             : 0;
+  display          : flex;
+  align-items      : center;
+  justify-content  : center;
+  transition       : all 0.3s;
+  background-color : #00000080;
+
+  /* .modal-order--hidden */
+  &--hidden {
+    right : 200vh;
+    left  : -200vw;
+  }
+}
+
+
+
+
+.modal-order__close {
+  position   : absolute;
+  top        : 30px;
+  right      : 30px;
+  padding    : 0;
+  cursor     : pointer;
+  border     : none;
+  background : transparent;
+}
+
+.modal-order__close-img {
+  stroke : #030303;
+}
+
+.modal-order__close-img:hover {
+  stroke : #710707;
+}
+
+.order-form {
+  position         : relative;
+  display          : flex;
+  justify-content  : space-between;
+  width            : 100%;
+  max-width        : 1440px;
+  margin           : 0 auto;
+  padding          : 91px 235px;
+  background-color : #fff;
+}
+
+
+.order-form__personal,
+.order-form__overview {
+  flex-shrink : 0;
+  min-width   : 400px;
+}
+
+.order-form__overview {
+  min-width : 530px;
+}
+
+.order-form__personal {
+  margin  : 0;
+  padding : 0;
+  border  : none;
+}
+
+.order-form__overview {
+  margin-left : 40px;
+}
+
+.order-form__logo {
+  fill : #9d8665;
+}
+
+.order-form__header {
+  font-family    : "Forum", "Arial", serif;
+  font-size      : 50px;
+  line-height    : 55px;
+  display        : flex;
+  flex-direction : column;
+  margin-bottom  : 15px;
+  text-transform : uppercase;
+  color          : #9d8665;
+}
+
+.order-form__subheader {
+  font-size      : 18px;
+  line-height    : 21px;
+  margin-top     : 0;
+  margin-bottom  : 60px;
+  padding-bottom : 8px;
+  color          : #710707;
+  border-bottom  : 3px solid rgba(116, 12, 17, .9);
+}
+
+.order-form__input {
+  font-size    : 18px;
+  line-height  : 21px;
+  width        : 100%;
+  min-height   : 45px;
+  padding-left : 45px;
+}
+
+.order-form__input::placeholder {
+  font-size   : 18px;
+  line-height : 21px;
+  color       : #030303;
+}
+
+.order-form__input--select {
+  font-size          : 18px;
+  line-height        : 21px;
+  color              : #030303;
+  outline            : none;
+  //background         : url("../assets/svg/form_arrow.svg") no-repeat center right 14px;
+  -webkit-appearance : none;
+  -moz-appearance    : none;
+  appearance         : none;
+}
+
+.order-form__input--select::slotted {
+  padding : 12px;
+}
+
+.order-form__input--date,
+.order-form__input--time {
+  width         : 190px;
+  padding-right : 11px;
+  outline       : none;
+}
+
+.order-form__input--date::-webkit-datetime-edit,
+.order-form__input--time::-webkit-datetime-edit {
+  display : none;
+  width   : 100%;
+}
+
+.order-form__input--date:focus::before,
+.order-form__input--date:active::before,
+.order-form__input--time:focus::before,
+.order-form__input--time:active::before {
+  display : none;
+}
+
+.order-form__input--date:focus::-webkit-datetime-edit,
+.order-form__input--date:active::-webkit-datetime-edit,
+.order-form__input--time:focus::-webkit-datetime-edit,
+.order-form__input--time:active::-webkit-datetime-edit {
+  display : flex;
+}
+
+.order-form__input--date::before,
+.order-form__input--time::before {
+  content : attr(placeholder);
+  flex    : 1 1 0%;
+  width   : 100%;
+}
+
+.order-form__input--date::-webkit-inner-spin-button,
+.order-form__input--date::-webkit-calendar-picker-indicator,
+.order-form__input--time::-webkit-calendar-picker-indicator {
+  background : url("../../svg/triangle-down.svg") no-repeat center right 2px;
+}
+
+.order-form__select-option {
+  font-size   : 18px;
+  font-weight : 300;
+  line-height : 21px;
+}
+
+.order-form__elements-line {
+  display               : grid;
+  grid-template-columns : 1fr 1fr;
+  grid-column-gap       : 20px;
+}
+
+.order-form__element {
+  position      : relative;
+  width         : 100%;
+  margin-bottom : 20px;
+}
+
+.order-form__icon-wrapper {
+  position        : absolute;
+  top             : 0;
+  bottom          : 0;
+  left            : 0;
+  display         : inline-flex;
+  align-items     : center;
+  justify-content : center;
+  width           : 40px;
+  color           : #999;
+}
+
+.order-form__icon {
+  fill : #030303;
+}
+
+.order-form__element-group {
+  padding : 10px 15px 15px;
+  border  : 1px solid #030303;
+}
+
+.order-form__element-group-title {
+  font-family    : "Forum", "Arial", serif;
+  font-size      : 18px;
+  line-height    : 20px;
+  margin-bottom  : 15px;
+  padding-bottom : 5px;
+  text-transform : capitalize;
+  color          : #9d8665;
+  border-bottom  : 2px solid rgba(116, 12, 17, .9);
+}
+
+.number-with-buttons {
+  display         : flex;
+  align-items     : center;
+  justify-content : space-between;
+  margin-bottom   : 18px;
+}
+
+.number-with-buttons:last-child {
+  margin-bottom : 0;
+}
+
+.number-with-buttons .number-with-buttons__wrapper {
+  display : flex;
+}
+
+.number-with-buttons .number-with-buttons__label {
+  font-size   : 18px;
+  line-height : 21px;
+  color       : #030303;
+}
+
+.number-with-buttons .number-with-buttons__btn {
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+  width           : 35px;
+  height          : 25px;
+  cursor          : pointer;
+  border          : none;
+  background      : #030303;
+}
+
+.number-with-buttons .number-with-buttons__btn:hover .number-with-buttons__icon {
+  fill : #9d8665;
+}
+
+.number-with-buttons .number-with-buttons__input {
+  font-size   : 18px;
+  line-height : 21px;
+  display     : block;
+  width       : 35px;
+  text-align  : center;
+  color       : #030303;
+  border      : 1px solid #030303;
+  background  : none;
+}
+
+.number-with-buttons .number-with-buttons__input::-webkit-inner-spin-button, .number-with-buttons .number-with-buttons__input::-webkit-outer-spin-button {
+  display : none;
+}
+
+.number-with-buttons .number-with-buttons__icon {
+  transition : all .3s ease-in;
+  fill       : #fff;
+}
+
+.order-overview {
+  padding : 24px 29px;
+  color   : #030303;
+}
+
+.order-overview__header {
+  display         : flex;
+  align-items     : flex-start;
+  justify-content : space-between;
+}
+
+.order-overview__header-title {
+  font-size   : 32px;
+  font-weight : 500;
+  line-height : 37px;
+  margin      : 0 0 3px;
+  color       : #272727;
+}
+
+.order-overview__header-subtitle {
+  font-size   : 22px;
+  font-weight : 500;
+  line-height : 26px;
+  margin      : 0;
+  opacity     : .9;
+  color       : #740c11;
+}
+
+.order-overview__params-list {
+  font-size   : 18px;
+  font-weight : 300;
+  line-height : 21px;
+  margin      : 10px 0 22px;
+  padding     : 0;
+  list-style  : none;
+}
+
+.order-overview__params-item {
+  margin-bottom : 6px;
+}
+
+.order-overview__params-icon {
+  margin-right : 10px;
+}
+
+.order-overview__tickets-line {
+  font-size       : 22px;
+  line-height     : 26px;
+  display         : flex;
+  align-items     : center;
+  justify-content : space-between;
+  margin          : 0 0 5px 0;
+}
+
+.order-overview__tickets-count {
+  font-size        : 18px;
+  line-height      : 21px;
+  margin-right     : 10px;
+  padding          : 0 11px;
+  color            : #a4a4a3;
+  border-radius    : 5px;
+  background-color : #030303;
+}
+
+.order-overview__tickets-total-value {
+  margin-left : auto;
+}
+
+.order-overview__tickets-total {
+  font-size       : 32px;
+  line-height     : 37px;
+  display         : flex;
+  align-items     : center;
+  justify-content : space-between;
+  margin          : 10px 0 0;
+  padding-top     : 10px;
+  border-top      : 2px solid #740c11;
+}
+
+.order-overview__card {
+  position   : relative;
+  height     : 241px;
+  margin-top : 10px;
+}
+
+.order-overview__card-front {
+  position      : relative;
+  z-index       : 2;
+  width         : 360px;
+  height        : 211px;
+  padding       : 15px 20px;
+  border-radius : 5px;
+  background    : #bcbcbc url("../../img/card.jpg") no-repeat top 34px right 20px;
+}
+
+.order-overview__card-back {
+  position      : absolute;
+  right         : 0;
+  bottom        : 0;
+  width         : 360px;
+  height        : 211px;
+  padding       : 15px 20px;
+  border-radius : 5px;
+  background    : #939393;
+}
+
+.order-overview__card-back::before {
+  content    : "";
+  position   : absolute;
+  top        : 25px;
+  right      : 0;
+  display    : block;
+  width      : 100%;
+  height     : 45px;
+  background : #161615;
+}
+
+.order-overview__card-field {
+  font-size     : 12px;
+  line-height   : 14px;
+  margin-bottom : 10px;
+  color         : #161615;
+}
+
+.order-overview__card-field--cvv {
+  position : absolute;
+  top      : 85px;
+  right    : 20px;
+  width    : 75px;
+}
+
+.order-overview__card-field-group {
+  display         : flex;
+  justify-content : space-between;
+  width           : 215px;
+  padding-top     : 5px;
+}
+
+.order-overview__card-input {
+  display    : block;
+  width      : 215px;
+  height     : 35px;
+  margin-top : 5px;
+  padding    : 5px 10px;
+  border     : .5px solid #a4a4a3;
+}
+
+.order-overview__card-input--holder {
+  width   : 100%;
+  padding : 5px 10px;
+}
+
+.order-overview__card-input--expiration {
+  width        : 72px;
+  margin       : 0;
+  padding      : 5px 10px;
+  border-right : none;
+}
+
+.order-overview__card-input--expiration::-webkit-inner-spin-button,
+.order-overview__card-input--expiration::-webkit-outer-spin-button {
+  display : none;
+}
+
+.order-overview__card-input--cvv {
+  width      : 75px;
+  padding    : 5px 10px;
+  text-align : center;
+}
+
+.order-overview__card-field-group-part {
+  display         : flex;
+  align-items     : center;
+  justify-content : flex-start;
+}
+
+.order-overview__card-input-spin {
+  display         : flex;
+  flex-direction  : column;
+  justify-content : center;
+  width           : 28px;
+  height          : 35px;
+  border          : .5px solid #a4a4a3;
+  background      : #fff;
+}
+
+.order-overview__card-input-spin-btn {
+  display         : flex;
+  align-items     : flex-end;
+  justify-content : center;
+  margin-bottom   : 1px;
+  cursor          : pointer;
+  border          : none;
+  background      : transparent;
+}
+
+
+.order-overview__card-input-spin-btn-icon {
+  transition : all .3s ease-in;
+  fill       : #a4a4a3;
+}
+
+.order-overview__card-input-spin-btn-icon:hover {
+  fill : var(--bg-dark-red);
+}
+
+.order-overview__btn {
+  font-size        : 22px;
+  line-height      : 26px;
+  position         : relative;
+  display          : flex;
+  overflow         : hidden;
+  align-items      : center;
+  justify-content  : center;
+  width            : 220px;
+  height           : 45px;
+  margin           : 25px 0 0 auto;
+  padding          : 0;
+  color            : #fff;
+  border           : none;
+  border-radius    : 0;
+  background-color : #710707;
+
+  &:active,
+  &:hover {
+    transition       : all 0.3s;
+    background-color : var(--gold);
+  }
+}
+
+.order-overview__card-help-text {
+  font-size   : 10px;
+  line-height : 12px;
+  margin      : 5px 0 0;
+  padding     : 0 10px;
+}
+
+.order-overview__card-field-label--cvv {
+  padding-left : 10px;
+}
+
